@@ -173,7 +173,7 @@ class WP_Object_Cache {
 
         $size = $this->get_data_size( $data );
         $this->timer_start();
-        $result = $mc->add( $key, $data, $expire );
+        $result = $mc->set( $key, $data, $expire );
         $elapsed = $this->timer_stop();
 
         $comment = '';
